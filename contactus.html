@@ -85,11 +85,83 @@
                 <h2>Send us your Feedback</h2>
                 <hr />
             </div>
+            <!-- FORM STARTS HERE-->
             <div class="col-md-10">
-                Form goes here
+                <form>
+                    <!--Start of nested bootstrap grid-->
+                    <!--Label, names the box, type classify type of data entered and placeholder shows users what info to input-->
+                    <!--Name attribute should be a single word-->
+                    <!--When form is submitted, data will be coupled with the name value in a key value data relationship-->
+                    <!--Every label must have a "for" that matches the input, if you click on it, it should make it active-->
+                    <!--Can treat label classes as div and add column to them-->
+                    <!--Input will need div for columns-->
+                    <div class="form-group row">
+                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
+                        <div class="col-5 col-md-3">
+                            <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
+                        </div>
+                        <!--QUESTION: Why is there a gap between Area code and Tel number if it takes up all 12 columns?-->
+                        <div class="col-7">
+                            <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <!--Offset class moves content to right by two on md and larger screens-->
+                        <div class="col offset-md-2">
+                            May we contact you?
+                            <!--Form check is a class to check layout and inline allows the radios to be inline-->
+                            <div class="form-check form-check-inline">
+                                <!--Radio is either or and names need to be the same-->
+                                <input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes" />
+                                <label for="contactYes" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="contactNo" name="contactRadios" value="no" />
+                                <label for="contactNo" class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                        <div class="col-md-10">
+                            <!--Textarea is a larger input-->
+                            <textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                        </div>
+                    </div>
+
+                </form>
+                <!--FORM END HERE-->
             </div>
        </div>
-
     </div>
 
 <!--THIS IS THE FOOTER-->
