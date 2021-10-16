@@ -1,17 +1,30 @@
 $(function() {
+    /* Automatically moves the carousel at 2 seconds*/
     $(".carousel").carousel( { interval: 2000 } );
+    /* When button click check if it is a pauase. If pause, stop the carousel with pause funtion */
     $("#carouselButton").click(function(){
-        //This function checks for a pause button
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-            // If it has the pasue button, pause the carousel and remove the pause  button to add play button
             $(".carousel").carousel("pause");
+            /* Change the pause to play button */
             $("#carouselButton").children("i").removeClass("fa-pause");
             $("#carouselButton").children("i").addClass("fa-play");
         } else {
-            // Else it has a play button so cycle through play and replace play button with pause button
+            /* Otherwise keep cycling because it is already a play button */
             $(".carousel").carousel("cycle");
             $("#carouselButton").children("i").removeClass("fa-play");
+            /* Remove play button and add pause button*/
             $("#carouselButton").children("i").addClass("fa-pause"); 
         }
     });
+    
+    /* When clicking on reserve button, show the modal relevant to their ids */
+    $("#reserveButton").click(function(){
+        $('#reserveModal').modal('show')
+    });
+
+    $("#loginButton").click(function(){
+        $('#loginModal').modal('show')
+    });
+
 });
+

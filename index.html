@@ -36,7 +36,7 @@
                     <!--Data-toggle and title are the only two attribute needed to create the tooltip-->
                     <!--Can add html to title attribute but it won't work without the data-html attribute-->
                     <!--Changed A tag to Button tag to make semantic make more sense since anchor typicallys user to different area sometimes external-->
-                    <button role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-lg btn-info text-nowrap">Reserve Campsite</button>
+                    <button role="button" id="reserveButton" class="btn btn-lg btn-info text-nowrap">Reserve Campsite</button>
                 </div>
             </div>
        </div>
@@ -46,7 +46,7 @@
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header">
                     <h3 class="modal-title">Reserve a Campsite</h3>
                     <!--&times is an HTML enitiy for an x button-->
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -122,7 +122,7 @@
                 <!--Login button-->
                 <span class="navbar-text ml-auto">
                     <!--Data attribute of modal-->
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                    <a role="button" id="loginButton">
                         <!--FA is referening font awesome-->
                         <i class="fa fa-sign-in"></i> Login
                     </a>
@@ -360,7 +360,6 @@
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
 
-    
 </body>
 <!-- Body END -->
 
