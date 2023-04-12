@@ -1,0 +1,36 @@
+/* This is our css file that will help make our HTML page look how we want by styling it */
+
+/* font-family allows us to choose the font, if font is not available, the default will be san-serif */
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Lobster", cursive;
+}
+
+h2 {
+    color: #3046C5;
+}
+
+header h2 {
+    color: #CEC8FF;
+}
+
+footer {
+    /* background-image we set with a gradient, we placed two colors but can be more */
+    background-image: linear-gradient(#CEC8FF, white);
+    padding: 20px 0;
+}
+
+.jumbotron {
+    padding: 30px;
+    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+    color: white;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
